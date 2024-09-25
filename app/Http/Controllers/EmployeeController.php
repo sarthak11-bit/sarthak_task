@@ -58,12 +58,11 @@ class EmployeeController extends Controller
         if (count($query) > 0) {
             $employees = Employee::where($query)->get();
         } else {
-            $employees = Employee::all(); // Fetch all employees if no date filter is applied
+            $employees = Employee::all(); 
         }
 
         return response()->json($employees);
-        // $employees = Employee::all();
-        // return response()->json($employees);
+        
     }
 
    
